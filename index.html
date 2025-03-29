@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Digital Mirror I and II. A component of an art piece by Leon Witthuhn."
+    />
+    <meta
+      name="keywords"
+      content="Leon Witthuhn, Leon Witthuhn Digital Mirror, Art exhibition, Art, Digital Mirror, Exhibition, Live Art, Inverted"
+    />
+    <meta name="author" content="Leon Witthuhn" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://leonwitthuhnart.co.za/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Leon Witthuhn Art" />
+    <meta
+      property="og:description"
+      content="Digital Mirror I and II. A component of an art piece by Leon Witthuhn."
+    />
+    <meta
+      property="og:image"
+      content="https://leonwitthuhnart.co.za/images/png/750.png"
+    />
+    <meta property="og:url" content="https://leonwitthuhnart.co.za/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Leon Witthuhn Art" />
+    <meta
+      name="twitter:description"
+      content="Digital Mirror I and II. A component of an art piece by Leon Witthuhn."
+    />
+    <meta
+      name="twitter:image"
+      content="https://leonwitthuhnart.co.za/png/750.png"
+    />
+
+    <title>Leon Witthuhn Art</title>
+    <link rel="icon" href="/images/png/750.png" />
+    <link
+      href="/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      crossorigin="anonymous"
+    />
+    <link href="/dist/css/all.min.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "VisualArtwork",
+        "name": "Digital Mirror I and II",
+        "creator": {
+          "@type": "Person",
+          "name": "Leon Witthuhn"
+        },
+        "description": "Digital Mirror I and II. A component of an art piece by Leon Witthuhn.",
+        "image": "https://leonwitthuhnart.co.za/images/png/750.png",
+        "url": "https://leonwitthuhnart.co.za/",
+        "dateCreated": "2025-02-18"
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid justify-content-center">
+        <a class="navbar-brand d-flex flex-column align-items-center">
+          <img
+            src="/images/png/750.png"
+            alt="Image of a art piece by Leon Witthuhn as website logo."
+            aria-label="Art piece by Leon Witthuhn as website logo."
+            width="75"
+            height="65"
+            class="d-inline-block"
+          />
+          <span class="fs-4" id="title">Digital Mirror I and II</span>
+        </a>
+      </div>
+    </nav>
+    <article itemscope itemtype="http://schema.org/Image">
+      <meta
+        itemprop="video"
+        content="Video of device camera, inverted to show a new perspective of art."
+      />
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div
+              class="alert alert-warning alert-dismissible"
+              role="alert"
+              hidden
+              id="cameraAlert"
+            >
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close alert."
+              ></button>
+              <i class="fa-solid fa-circle-exclamation"></i>
+              To begin your experience, please grant access to your camera.
+              Refresh the page and allow camera permissions to fully immerse
+              yourself in the art exhibition.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col d-flex justify-content-center align-items-center"
+            id="video-wrapper"
+          >
+            <video
+              playsinline
+              autoplay
+              id="video"
+              class="rounded-5"
+              aria-label="Inverter Mirror of camera"
+            ></video>
+            <canvas
+              id="canvas"
+              aria-label="Canvas used to generate the image users can take."
+            ></canvas>
+            <button
+              id="flipCameraBtn"
+              type="button"
+              aria-label="Button to flip the camera to selfie view."
+              class="btn btn-info rounded-5 p-2 position-absolute top-0 end-0 mt-2 me-4"
+            >
+              <i class="fa-solid fa-camera-rotate"></i>
+            </button>
+            <div id="errorMessage" class="error-overlay text-white d-flex">
+              <span><i class="fa-solid fa-bug fa-2xl"></i></span>
+              <p>Camera access denied or an error occurred.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row py-1">
+          <div class="col text-center">
+            <div class="d-grid">
+              <button
+                id="cameraBtn"
+                type="button"
+                aria-label="Button to download image of what your camera is viewing."
+                class="btn btn-primary rounded-5 btn-lg"
+              >
+                <i class="fa-solid fa-camera"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <script src="/app.js" defer crossorigin="anonymous"></script>
+    <script
+      src="/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/dist/js/all.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
